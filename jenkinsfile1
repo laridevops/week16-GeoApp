@@ -7,10 +7,17 @@ pipeline {
     }
 
     stages {
+        stage ("sonarqube scan") {
+            steps {
+                sh 'mvn sonar:sonar' #to scan and test the code
+            }
+        }
+
         stage ("all maven commands") {
             steps {
                 sh 'mvn clean test compile install package'
             }
         }
+
+        }
     }
-}
