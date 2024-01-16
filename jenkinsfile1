@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage ("sonarqube scan") {
             steps {
-                sh 'mvn sonar:sonar' #to scan and test the code
+                sh 'mvn sonar:sonar'
             }
         }
 
