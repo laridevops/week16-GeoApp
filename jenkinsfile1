@@ -9,7 +9,9 @@ pipeline {
     stages {
         stage ("sonarqube scan") {
             steps {
+                withSonarQubeEnv ('sonarserver') {
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=laridevops_week16-geoapp'
+                }
             }
         }
 
