@@ -4,6 +4,7 @@ pipeline {
     }
     stages{
         stage ('docker group') {
+             agent {docker { image 'node:20.10.0-alpine3.19' }}
         steps{
             sh 'docker exec -it node:20.10.0-alpine3.19 /bin/bash'
             sh 'whoami'
