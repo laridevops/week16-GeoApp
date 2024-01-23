@@ -23,7 +23,7 @@ pipeline {
 
         stage ("uplaod artifact") {
             steps {
-                sh 'curl -uadmin:AP93kMYoP1b5AfisPKN4EZn94g4 -T target/bio*.jar "http://ec2-44-205-243-105.compute-1.amazonaws.com:8081/artifactory/geoapp/"'
+                sh 'curl -uadmin:AP93kMYoP1b5AfisPKN4EZn94g4 -T target/bio*.jar "http://ec2-3-83-175-95.compute-1.amazonaws.com:8081/artifactory/geoapp/"'
             }
         }
 
